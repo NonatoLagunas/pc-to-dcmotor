@@ -33,13 +33,32 @@
 
     ''Method to display the received data from arduino
     Private Sub displayArduinoData(ByVal data As String)
-        txtTest.AppendText(data)
+        txtConsole.AppendText(data)
     End Sub
 
-    Private Sub btnTest_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTest.Click
-        Dim trama(10) As Byte
-        'trama = {255, 100, m1_vel, 110, m1_pos, 200, m2_vel, 210, m2_pos, 255}
-        trama = {255, 200, 255, 50, 200, 70, 210, 80, 255}
+    Private Sub btnMoveDCBack_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMoveDCBack.Click
+        Dim trama(3) As Byte
+        ''action = forward=100, reverse=200, stop=300
+        'trama = {255, action, 255}
+        trama = {255, 20, 255}
+        ''Send data to the Arduino
+        ArduinoSerialComm.SendFrame(trama, 3)
+    End Sub
+
+    Private Sub btnDCStop_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDCStop.Click
+        Dim trama(3) As Byte
+        ''action = forward=100, reverse=200, stop=300
+        'trama = {255, action, 255}
+        trama = {255, 30, 255}
+        ''Send data to the Arduino
+        ArduinoSerialComm.SendFrame(trama, 3)
+    End Sub
+
+    Private Sub btnMoveDCForward_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMoveDCForward.Click
+        Dim trama(3) As Byte
+        ''action = forward=100, reverse=200, stop=300
+        'trama = {255, action, 255}
+        trama = {255, 10, 255}
         ''Send data to the Arduino
         ArduinoSerialComm.SendFrame(trama, 3)
     End Sub

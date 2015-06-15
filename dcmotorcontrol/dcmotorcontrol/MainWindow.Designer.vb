@@ -24,11 +24,13 @@ Partial Class frmMainWindow
     Private Sub InitializeComponent()
         Me.tabMainWindowTab = New System.Windows.Forms.TabControl()
         Me.tpControls = New System.Windows.Forms.TabPage()
-        Me.txtTest = New System.Windows.Forms.TextBox()
-        Me.btnTest = New System.Windows.Forms.Button()
+        Me.btnMoveDCForward = New System.Windows.Forms.Button()
+        Me.btnDCStop = New System.Windows.Forms.Button()
+        Me.btnMoveDCBack = New System.Windows.Forms.Button()
         Me.tbProperties = New System.Windows.Forms.TabPage()
         Me.txtPort = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtConsole = New System.Windows.Forms.TextBox()
         Me.tabMainWindowTab.SuspendLayout()
         Me.tpControls.SuspendLayout()
         Me.tbProperties.SuspendLayout()
@@ -46,8 +48,10 @@ Partial Class frmMainWindow
         '
         'tpControls
         '
-        Me.tpControls.Controls.Add(Me.txtTest)
-        Me.tpControls.Controls.Add(Me.btnTest)
+        Me.tpControls.Controls.Add(Me.txtConsole)
+        Me.tpControls.Controls.Add(Me.btnMoveDCForward)
+        Me.tpControls.Controls.Add(Me.btnDCStop)
+        Me.tpControls.Controls.Add(Me.btnMoveDCBack)
         Me.tpControls.Location = New System.Drawing.Point(4, 22)
         Me.tpControls.Name = "tpControls"
         Me.tpControls.Padding = New System.Windows.Forms.Padding(3)
@@ -56,22 +60,32 @@ Partial Class frmMainWindow
         Me.tpControls.Text = "Controls"
         Me.tpControls.UseVisualStyleBackColor = True
         '
-        'txtTest
+        'btnMoveDCForward
         '
-        Me.txtTest.Location = New System.Drawing.Point(6, 35)
-        Me.txtTest.Multiline = True
-        Me.txtTest.Name = "txtTest"
-        Me.txtTest.Size = New System.Drawing.Size(183, 71)
-        Me.txtTest.TabIndex = 2
+        Me.btnMoveDCForward.Location = New System.Drawing.Point(363, 52)
+        Me.btnMoveDCForward.Name = "btnMoveDCForward"
+        Me.btnMoveDCForward.Size = New System.Drawing.Size(97, 85)
+        Me.btnMoveDCForward.TabIndex = 5
+        Me.btnMoveDCForward.Text = "Forward"
+        Me.btnMoveDCForward.UseVisualStyleBackColor = True
         '
-        'btnTest
+        'btnDCStop
         '
-        Me.btnTest.Location = New System.Drawing.Point(6, 6)
-        Me.btnTest.Name = "btnTest"
-        Me.btnTest.Size = New System.Drawing.Size(75, 23)
-        Me.btnTest.TabIndex = 0
-        Me.btnTest.Text = "Test Communication"
-        Me.btnTest.UseVisualStyleBackColor = True
+        Me.btnDCStop.Location = New System.Drawing.Point(223, 52)
+        Me.btnDCStop.Name = "btnDCStop"
+        Me.btnDCStop.Size = New System.Drawing.Size(97, 85)
+        Me.btnDCStop.TabIndex = 4
+        Me.btnDCStop.Text = "Stop"
+        Me.btnDCStop.UseVisualStyleBackColor = True
+        '
+        'btnMoveDCBack
+        '
+        Me.btnMoveDCBack.Location = New System.Drawing.Point(83, 52)
+        Me.btnMoveDCBack.Name = "btnMoveDCBack"
+        Me.btnMoveDCBack.Size = New System.Drawing.Size(97, 85)
+        Me.btnMoveDCBack.TabIndex = 3
+        Me.btnMoveDCBack.Text = "Back"
+        Me.btnMoveDCBack.UseVisualStyleBackColor = True
         '
         'tbProperties
         '
@@ -102,6 +116,14 @@ Partial Class frmMainWindow
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Port:"
         '
+        'txtConsole
+        '
+        Me.txtConsole.Location = New System.Drawing.Point(6, 166)
+        Me.txtConsole.Multiline = True
+        Me.txtConsole.Name = "txtConsole"
+        Me.txtConsole.Size = New System.Drawing.Size(529, 112)
+        Me.txtConsole.TabIndex = 6
+        '
         'frmMainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -123,7 +145,9 @@ Partial Class frmMainWindow
     Friend WithEvents tbProperties As System.Windows.Forms.TabPage
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtPort As System.Windows.Forms.TextBox
-    Friend WithEvents btnTest As System.Windows.Forms.Button
-    Friend WithEvents txtTest As System.Windows.Forms.TextBox
+    Friend WithEvents btnMoveDCForward As System.Windows.Forms.Button
+    Friend WithEvents btnDCStop As System.Windows.Forms.Button
+    Friend WithEvents btnMoveDCBack As System.Windows.Forms.Button
+    Friend WithEvents txtConsole As System.Windows.Forms.TextBox
 
 End Class
