@@ -1,2 +1,2 @@
 # pc-to-dcmotor
-PC interface to control a dc motor via arduino.
+PC interface (with VS 2010) to control a dc motor via arduino.
