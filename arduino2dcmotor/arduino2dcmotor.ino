@@ -1,16 +1,6 @@
 int incomingByte = 0;
-//valores
-int m1_pos=0;
-int m1_vel=0;
-int m2_pos=0;
-int m2_vel=0;
-//flags
+//TX/RX Flags
 int tx=0;
-int recibiendo_m1_vel=0;
-int recibiendo_m1_pos=0;
-int recibiendo_m2_vel=0;
-int recibiendo_m2_pos=0;
-
 void setup()
 {
   // initialize digital pin 13 as an output.
@@ -24,56 +14,29 @@ void loop()
   {
     // read the incoming byte:
     incomingByte = Serial.read();
-    
-    if(recibiendo_m1_vel==1)
-    {
-      m1_vel=incomingByte;
-      recibiendo_m1_vel=0;
-      Serial.println(m1_vel);
-      return;
-    }
-    if(recibiendo_m1_pos==1)
-    {
-      m1_pos=incomingByte;
-      recibiendo_m1_pos=0;
-      Serial.println(m1_pos);
-      return;
-    }
-    if(recibiendo_m2_vel==1)
-    {
-      m2_vel=incomingByte;
-      recibiendo_m2_vel=0;
-      Serial.println(m2_vel);
-      return;
-    }
-    if(recibiendo_m2_pos==1)
-    {
-      m2_pos=incomingByte;
-      recibiendo_m2_pos=0;
-      Serial.println(m2_pos);
-      return;
-    }
-    
+        
     switch(incomingByte)
     {
+      //init/end tx
       case 255:
         tx = (tx==0) ? 1:0;
         break;
+      //move DC motor fordward
       case 100:
         if(tx==1)
-          recibiendo_m1_vel=1;
+          digitalWrite(13, HIGH);
         break;
+      //mode DC motor backwards
       case 110:
         if(tx==1)
-          recibiendo_m1_pos=1;
+          digitalWrite(13, LOW);
         break;
+      //stop DC motor
       case 200:
         if(tx==1)
-          recibiendo_m2_vel=1;
-        break;
-      case 210:
-        if(tx==1)
-          recibiendo_m2_pos=1;
+          digitalWrite(13, HIGH);
+          delay(1000);
+          digitalWrite(13, LOW);
         break;
     }
     

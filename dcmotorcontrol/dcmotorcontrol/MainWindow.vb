@@ -39,8 +39,8 @@
     Private Sub btnTest_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTest.Click
         Dim trama(10) As Byte
         'trama = {255, 100, m1_vel, 110, m1_pos, 200, m2_vel, 210, m2_pos, 255}
-        trama = {255, 110, 40, 255, 50, 200, 70, 210, 80, 255}
+        trama = {255, 200, 255, 50, 200, 70, 210, 80, 255}
         ''Send data to the Arduino
-        ArduinoSerialComm.SendFrame(trama, 4)
+        ArduinoSerialComm.SendFrame(trama, 3)
     End Sub
 End Class
