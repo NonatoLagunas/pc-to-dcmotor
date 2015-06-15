@@ -22,17 +22,17 @@ void loop()
         tx = (tx==0) ? 1:0;
         break;
       //move DC motor fordward
-      case 100:
+      case 10:
         if(tx==1)
           digitalWrite(13, HIGH);
         break;
       //mode DC motor backwards
-      case 110:
+      case 20:
         if(tx==1)
           digitalWrite(13, LOW);
         break;
       //stop DC motor
-      case 200:
+      case 30:
         if(tx==1)
           digitalWrite(13, HIGH);
           delay(1000);
