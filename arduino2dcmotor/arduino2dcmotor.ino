@@ -1,58 +1,66 @@
+//Data to receive from PC
 int incomingByte = 0;
 //TX/RX Flags
 int tx=0;
-//pins values
-int ina=LOW;
-int inb=LOW;
+/////-----PINS CONFIGURATION-----/////
+//Pins assignment
+int pin_INA=13;
+int pin_INB=12;
+int pin_PWM=10;
+//Pins values
+int pin_INAValue=LOW;
+int pin_INBValue=LOW;
+int pin_PWMValue=127;
 void setup()
 {
-  // initialize digital pin 13 as an output.
-  //pinMode(13, OUTPUT);
-  // initialize pins INA(13), INB(12)
-  pinMode(13, OUTPUT);
-  pinMode(12, OUTPUT);
-  // initialize PWN pin (10)
-  pinMode(10, OUTPUT);
+  // initialize pins INA, INB
+  pinMode(pin_INA, OUTPUT);
+  pinMode(pin_INB, OUTPUT);
+  // initialize PWN pin
+  pinMode(pin_PWM, OUTPUT);
+  
   Serial.begin(9600);
 }
 
 void loop()
-{
-  if (Serial.available() > 0) 
-  {
-    // set pins INA(13), INB(12) value
-    digitalWrite(13, ina);
-    digitalWrite(12, inb);
-    // set PWN (10) value
-    analogWrite(10, 127);
+{  
+  // set pins INA, INB value
+  digitalWrite(pin_INA, pin_INAValue);
+  digitalWrite(pin_INB, pin_INBValue);
+  // set PWN value
+  analogWrite(pin_PWM, pin_PWMValue);
     
+  //Check if it ios any data on the serial port
+  if (Serial.available() > 0) 
+  {    
     // read the incoming byte:
     incomingByte = Serial.read();
-        
+
+    //check th received data
     switch(incomingByte)
     {
       //init/end tx
       case 255:
         tx = (tx==0) ? 1:0;
         break;
-      //move DC motor fordward
+      //move DC motor clockwise
       case 10:
         if(tx==1)
-          ina=HIGH;inb=LOW;
+          pin_INAValue=HIGH;
+          pin_INBValue=LOW;
         break;
-      //mode DC motor backwards
+      //mode DC motor counterclockwise
       case 20:
         if(tx==1)
-          ina=LOW;inb=HIGH;
+          pin_INAValue=LOW;
+          pin_INBValue=HIGH;
         break;
       //stop DC motor
       case 30:
         if(tx==1)
-          ina=LOW;inb=LOW;
+          pin_INAValue=LOW;
+          pin_INBValue=LOW;
         break;
     }
-    
-    // say what you received in ASCII
-    //Serial.println(incomingByte);
   }
 }
