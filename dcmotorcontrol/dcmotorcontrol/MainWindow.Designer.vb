@@ -24,13 +24,13 @@ Partial Class frmMainWindow
     Private Sub InitializeComponent()
         Me.tabMainWindowTab = New System.Windows.Forms.TabControl()
         Me.tpControls = New System.Windows.Forms.TabPage()
+        Me.txtConsole = New System.Windows.Forms.TextBox()
         Me.btnMoveDCForward = New System.Windows.Forms.Button()
         Me.btnDCStop = New System.Windows.Forms.Button()
         Me.btnMoveDCBack = New System.Windows.Forms.Button()
         Me.tbProperties = New System.Windows.Forms.TabPage()
         Me.txtPort = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtConsole = New System.Windows.Forms.TextBox()
         Me.tabMainWindowTab.SuspendLayout()
         Me.tpControls.SuspendLayout()
         Me.tbProperties.SuspendLayout()
@@ -59,6 +59,14 @@ Partial Class frmMainWindow
         Me.tpControls.TabIndex = 0
         Me.tpControls.Text = "Controls"
         Me.tpControls.UseVisualStyleBackColor = True
+        '
+        'txtConsole
+        '
+        Me.txtConsole.Location = New System.Drawing.Point(6, 166)
+        Me.txtConsole.Multiline = True
+        Me.txtConsole.Name = "txtConsole"
+        Me.txtConsole.Size = New System.Drawing.Size(529, 112)
+        Me.txtConsole.TabIndex = 6
         '
         'btnMoveDCForward
         '
@@ -105,7 +113,7 @@ Partial Class frmMainWindow
         Me.txtPort.Name = "txtPort"
         Me.txtPort.Size = New System.Drawing.Size(100, 20)
         Me.txtPort.TabIndex = 1
-        Me.txtPort.Text = "COM3"
+        Me.txtPort.Text = "COM9"
         '
         'Label1
         '
@@ -115,14 +123,6 @@ Partial Class frmMainWindow
         Me.Label1.Size = New System.Drawing.Size(29, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Port:"
-        '
-        'txtConsole
-        '
-        Me.txtConsole.Location = New System.Drawing.Point(6, 166)
-        Me.txtConsole.Multiline = True
-        Me.txtConsole.Name = "txtConsole"
-        Me.txtConsole.Size = New System.Drawing.Size(529, 112)
-        Me.txtConsole.TabIndex = 6
         '
         'frmMainWindow
         '

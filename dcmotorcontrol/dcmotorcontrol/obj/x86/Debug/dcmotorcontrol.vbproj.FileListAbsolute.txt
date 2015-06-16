@@ -9,3 +9,14 @@ C:\Users\robocup\Documents\Projects\pc-to-dcmotor\dcmotorcontrol\dcmotorcontrol\
 C:\Users\robocup\Documents\Projects\pc-to-dcmotor\dcmotorcontrol\dcmotorcontrol\obj\x86\Debug\dcmotorcontrol.exe
 C:\Users\robocup\Documents\Projects\pc-to-dcmotor\dcmotorcontrol\dcmotorcontrol\obj\x86\Debug\dcmotorcontrol.xml
 C:\Users\robocup\Documents\Projects\pc-to-dcmotor\dcmotorcontrol\dcmotorcontrol\obj\x86\Debug\dcmotorcontrol.pdb
+C:\Users\nonat_000\Documents\Projects\pc-to-dcmotor\dcmotorcontrol\dcmotorcontrol\obj\x86\Debug\dcmotorcontrol.exe
+C:\Users\nonat_000\Documents\Projects\pc-to-dcmotor\dcmotorcontrol\dcmotorcontrol\obj\x86\Debug\dcmotorcontrol.xml
+C:\Users\nonat_000\Documents\Projects\pc-to-dcmotor\dcmotorcontrol\dcmotorcontrol\obj\x86\Debug\dcmotorcontrol.pdb
+C:\Users\nonat_000\Documents\Projects\pc-to-dcmotor\dcmotorcontrol\dcmotorcontrol\bin\Debug\dcmotorcontrol.exe
+C:\Users\nonat_000\Documents\Projects\pc-to-dcmotor\dcmotorcontrol\dcmotorcontrol\bin\Debug\dcmotorcontrol.pdb
+C:\Users\nonat_000\Documents\Projects\pc-to-dcmotor\dcmotorcontrol\dcmotorcontrol\bin\Debug\dcmotorcontrol.xml
+C:\Users\nonat_000\Documents\Projects\pc-to-dcmotor\dcmotorcontrol\dcmotorcontrol\bin\Debug\inocomm.dll
+C:\Users\nonat_000\Documents\Projects\pc-to-dcmotor\dcmotorcontrol\dcmotorcontrol\obj\x86\Debug\dcmotorcontrol.vbprojResolveAssemblyReference.cache
+C:\Users\nonat_000\Documents\Projects\pc-to-dcmotor\dcmotorcontrol\dcmotorcontrol\obj\x86\Debug\dcmotorcontrol.frmMainWindow.resources
+C:\Users\nonat_000\Documents\Projects\pc-to-dcmotor\dcmotorcontrol\dcmotorcontrol\obj\x86\Debug\dcmotorcontrol.Resources.resources
+C:\Users\nonat_000\Documents\Projects\pc-to-dcmotor\dcmotorcontrol\dcmotorcontrol\obj\x86\Debug\dcmotorcontrol.vbproj.GenerateResource.Cache
