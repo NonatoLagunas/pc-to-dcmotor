@@ -24,130 +24,126 @@ Partial Class frmMainWindow
     Private Sub InitializeComponent()
         Me.tabMainWindowTab = New System.Windows.Forms.TabControl()
         Me.tpControls = New System.Windows.Forms.TabPage()
-        Me.txtConsole = New System.Windows.Forms.TextBox()
         Me.btnMoveDCForward = New System.Windows.Forms.Button()
         Me.btnDCStop = New System.Windows.Forms.Button()
         Me.btnMoveDCBack = New System.Windows.Forms.Button()
-        Me.tbProperties = New System.Windows.Forms.TabPage()
-        Me.txtPort = New System.Windows.Forms.TextBox()
+        Me.btnConnect = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtConsole = New System.Windows.Forms.TextBox()
+        Me.cboPorts = New System.Windows.Forms.ComboBox()
         Me.tabMainWindowTab.SuspendLayout()
         Me.tpControls.SuspendLayout()
-        Me.tbProperties.SuspendLayout()
         Me.SuspendLayout()
         '
         'tabMainWindowTab
         '
         Me.tabMainWindowTab.Controls.Add(Me.tpControls)
-        Me.tabMainWindowTab.Controls.Add(Me.tbProperties)
         Me.tabMainWindowTab.Location = New System.Drawing.Point(12, 12)
         Me.tabMainWindowTab.Name = "tabMainWindowTab"
         Me.tabMainWindowTab.SelectedIndex = 0
-        Me.tabMainWindowTab.Size = New System.Drawing.Size(549, 310)
+        Me.tabMainWindowTab.Size = New System.Drawing.Size(368, 180)
         Me.tabMainWindowTab.TabIndex = 0
         '
         'tpControls
         '
-        Me.tpControls.Controls.Add(Me.txtConsole)
         Me.tpControls.Controls.Add(Me.btnMoveDCForward)
         Me.tpControls.Controls.Add(Me.btnDCStop)
         Me.tpControls.Controls.Add(Me.btnMoveDCBack)
         Me.tpControls.Location = New System.Drawing.Point(4, 22)
         Me.tpControls.Name = "tpControls"
         Me.tpControls.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpControls.Size = New System.Drawing.Size(541, 284)
+        Me.tpControls.Size = New System.Drawing.Size(360, 154)
         Me.tpControls.TabIndex = 0
-        Me.tpControls.Text = "Controls"
+        Me.tpControls.Text = "Controles"
         Me.tpControls.UseVisualStyleBackColor = True
-        '
-        'txtConsole
-        '
-        Me.txtConsole.Location = New System.Drawing.Point(6, 166)
-        Me.txtConsole.Multiline = True
-        Me.txtConsole.Name = "txtConsole"
-        Me.txtConsole.Size = New System.Drawing.Size(529, 112)
-        Me.txtConsole.TabIndex = 6
         '
         'btnMoveDCForward
         '
-        Me.btnMoveDCForward.Location = New System.Drawing.Point(363, 52)
+        Me.btnMoveDCForward.Location = New System.Drawing.Point(257, 34)
         Me.btnMoveDCForward.Name = "btnMoveDCForward"
         Me.btnMoveDCForward.Size = New System.Drawing.Size(97, 85)
         Me.btnMoveDCForward.TabIndex = 5
-        Me.btnMoveDCForward.Text = "Forward"
+        Me.btnMoveDCForward.Text = "Adelante"
         Me.btnMoveDCForward.UseVisualStyleBackColor = True
         '
         'btnDCStop
         '
-        Me.btnDCStop.Location = New System.Drawing.Point(223, 52)
+        Me.btnDCStop.Location = New System.Drawing.Point(131, 34)
         Me.btnDCStop.Name = "btnDCStop"
         Me.btnDCStop.Size = New System.Drawing.Size(97, 85)
         Me.btnDCStop.TabIndex = 4
-        Me.btnDCStop.Text = "Stop"
+        Me.btnDCStop.Text = "Alto"
         Me.btnDCStop.UseVisualStyleBackColor = True
         '
         'btnMoveDCBack
         '
-        Me.btnMoveDCBack.Location = New System.Drawing.Point(83, 52)
+        Me.btnMoveDCBack.Location = New System.Drawing.Point(6, 34)
         Me.btnMoveDCBack.Name = "btnMoveDCBack"
         Me.btnMoveDCBack.Size = New System.Drawing.Size(97, 85)
         Me.btnMoveDCBack.TabIndex = 3
-        Me.btnMoveDCBack.Text = "Back"
+        Me.btnMoveDCBack.Text = "Atras"
         Me.btnMoveDCBack.UseVisualStyleBackColor = True
         '
-        'tbProperties
+        'btnConnect
         '
-        Me.tbProperties.Controls.Add(Me.txtPort)
-        Me.tbProperties.Controls.Add(Me.Label1)
-        Me.tbProperties.Location = New System.Drawing.Point(4, 22)
-        Me.tbProperties.Name = "tbProperties"
-        Me.tbProperties.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbProperties.Size = New System.Drawing.Size(541, 284)
-        Me.tbProperties.TabIndex = 1
-        Me.tbProperties.Text = "Properties"
-        Me.tbProperties.UseVisualStyleBackColor = True
-        '
-        'txtPort
-        '
-        Me.txtPort.Location = New System.Drawing.Point(53, 22)
-        Me.txtPort.Name = "txtPort"
-        Me.txtPort.Size = New System.Drawing.Size(100, 20)
-        Me.txtPort.TabIndex = 1
-        Me.txtPort.Text = "COM9"
+        Me.btnConnect.Location = New System.Drawing.Point(382, 102)
+        Me.btnConnect.Name = "btnConnect"
+        Me.btnConnect.Size = New System.Drawing.Size(135, 51)
+        Me.btnConnect.TabIndex = 2
+        Me.btnConnect.Text = "Conectar"
+        Me.btnConnect.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(18, 25)
+        Me.Label1.Location = New System.Drawing.Point(382, 34)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(29, 13)
+        Me.Label1.Size = New System.Drawing.Size(41, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Port:"
+        Me.Label1.Text = "Puerto:"
+        '
+        'txtConsole
+        '
+        Me.txtConsole.Location = New System.Drawing.Point(12, 198)
+        Me.txtConsole.Multiline = True
+        Me.txtConsole.Name = "txtConsole"
+        Me.txtConsole.Size = New System.Drawing.Size(505, 124)
+        Me.txtConsole.TabIndex = 6
+        '
+        'cboPorts
+        '
+        Me.cboPorts.FormattingEnabled = True
+        Me.cboPorts.Location = New System.Drawing.Point(429, 31)
+        Me.cboPorts.Name = "cboPorts"
+        Me.cboPorts.Size = New System.Drawing.Size(88, 21)
+        Me.cboPorts.TabIndex = 7
         '
         'frmMainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(573, 334)
+        Me.ClientSize = New System.Drawing.Size(527, 334)
+        Me.Controls.Add(Me.cboPorts)
+        Me.Controls.Add(Me.btnConnect)
+        Me.Controls.Add(Me.txtConsole)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.tabMainWindowTab)
         Me.Name = "frmMainWindow"
         Me.Text = "Main Window"
         Me.tabMainWindowTab.ResumeLayout(False)
         Me.tpControls.ResumeLayout(False)
-        Me.tpControls.PerformLayout()
-        Me.tbProperties.ResumeLayout(False)
-        Me.tbProperties.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents tabMainWindowTab As System.Windows.Forms.TabControl
     Friend WithEvents tpControls As System.Windows.Forms.TabPage
-    Friend WithEvents tbProperties As System.Windows.Forms.TabPage
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents txtPort As System.Windows.Forms.TextBox
     Friend WithEvents btnMoveDCForward As System.Windows.Forms.Button
     Friend WithEvents btnDCStop As System.Windows.Forms.Button
     Friend WithEvents btnMoveDCBack As System.Windows.Forms.Button
     Friend WithEvents txtConsole As System.Windows.Forms.TextBox
+    Friend WithEvents btnConnect As System.Windows.Forms.Button
+    Friend WithEvents cboPorts As System.Windows.Forms.ComboBox
 
 End Class
